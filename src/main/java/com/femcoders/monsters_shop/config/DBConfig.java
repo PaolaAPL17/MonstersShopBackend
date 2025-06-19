@@ -14,7 +14,7 @@ public class DBConfig {
     private Environment env;
     @Bean
     public DataSource dataSource() {
-        Dotenv dotenv = Dotenv.configure().directory("./").ignoreIfMalformed().ignoreIfMissing().load();
+        Dotenv dotenv = Dotenv.configure().directory("monsters-shop").load();
         String dbUrl = dotenv.get("DB_URL");
         String dbUser = dotenv.get("DB_USER");
         String dbPassword = dotenv.get("DB_PASSWORD");
